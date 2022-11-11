@@ -15,19 +15,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/emailEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="268dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoImageView" />
-
-
 
     <EditText
         android:id="@+id/passwdEditText"
@@ -42,15 +29,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
 
-    <Button
-        android:id="@+id/signupButton"
+    <EditText
+        android:id="@+id/emailEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:text="@string/signin_email"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/email"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwdEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/logoImageView" />
 
     <Button
         android:id="@+id/facebookSignupButton"
@@ -70,12 +60,23 @@
         android:layout_width="wrap_content"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/btn_signin_google"
         android:text="@string/signin_google"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/facebookSignupButton" />
+
+    <Button
+        android:id="@+id/signupButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="@string/signin_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwdEditText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
