@@ -1,0 +1,2 @@
+레이아웃 id 쓸 때 용도 + 태그네임
+ex) 용도: id(button) -> idButton
