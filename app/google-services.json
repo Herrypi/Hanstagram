@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "885130372795",
+    "project_id": "hanstargram-250c7",
+    "storage_bucket": "hanstargram-250c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885130372795:android:d2f9243446f76ce4e7eb9e",
+        "android_client_info": {
+          "package_name": "com.example.hanstargram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "885130372795-o7kjl9vvkujnc05s2c2mvel3q1qb7l5f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOEaWx2VLbRzlnQjgHUteAZsk5-Mw7EVg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "885130372795-o7kjl9vvkujnc05s2c2mvel3q1qb7l5f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
