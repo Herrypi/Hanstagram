@@ -11,15 +11,16 @@ import com.google.firebase.auth.FirebaseUser
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity(){
-    var auth : FirebaseAuth? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_login)
         auth = FirebaseAuth.getInstance()
         signupButton.setOnClickListener {
             signinAndSignup()
         }
     }
+    var auth : FirebaseAuth? = null
+
     fun signinAndSignup() {
         auth?.createUserWithEmailAndPassword(emailEditText.text.toString(), passwdEditText.text.toString())
             ?.addOnCompleteListener {
@@ -48,7 +49,7 @@ class LoginActivity : AppCompatActivity(){
     }
     fun moveMainPage(user: FirebaseUser?) {
         if(user != null) {
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this,LoginActivity::class.java))
         }
     }
 }
