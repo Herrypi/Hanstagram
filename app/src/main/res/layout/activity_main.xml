@@ -35,7 +35,8 @@
         android:id="@+id/contentMain"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/divisionToolbar" />
+        android:layout_below="@+id/divisionToolbar"
+        tools:layout_editor_absoluteY="20dp" />
 
     <LinearLayout
         android:id="@+id/divisionNav"
@@ -54,7 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:layout_constraintBottom_toBottomOf="@+id/contentMain"
-        tools:ignore="MissingConstraints"></com.google.android.material.bottomnavigation.BottomNavigationView>
+        tools:ignore="MissingConstraints" />
 <!--    <androidx.-->
 <!--        android:background="?attr/colorPrimary"-->
 <!--        android:minHeight="?attr/actionBarSize"-->
