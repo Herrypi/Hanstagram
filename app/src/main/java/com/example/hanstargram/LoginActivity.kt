@@ -95,7 +95,7 @@ class LoginActivity : AppCompatActivity(){
     fun signinEmail() {
         auth?.signInWithEmailAndPassword(emailEditText.text.toString(), passwdEditText.text.toString())
             ?.addOnCompleteListener{
-                task->
+                    task->
                 if(task.isSuccessful) {
                     moveMainPage(task.result?.user)
                 }
