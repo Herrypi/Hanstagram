@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,60 +8,49 @@
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        tools:ignore="MissingConstraints">
+        android:layout_height="35dp">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/logo_title" />
+                android:src="@drawable/logo_title">
+            </ImageView>
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
-
     <LinearLayout
-        android:id="@+id/divisionToolbar"
-        android:background="@color/colorDivision"
+        android:id="@+id/toolbar_division"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:background="@color/colorDivision"
         android:orientation="horizontal"
-        android:layout_below="@+id/toolbar"
-        tools:ignore="MissingConstraints" />
+        android:layout_below="@id/my_toolbar"/>
 
     <FrameLayout
-        android:id="@+id/contentMain"
+        android:id="@+id/main_content"
+        android:layout_below="@id/toolbar_division"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/divisionToolbar"
-        tools:layout_editor_absoluteY="20dp" />
+        android:layout_above="@+id/nav_division"/>
 
     <LinearLayout
-        android:id="@+id/divisionNav"
+        android:id="@+id/nav_division"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_above="@+id/navigationBottom"
         android:background="@color/colorDivision"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/navigationBottom"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        tools:ignore="MissingConstraints" />
-
+        android:layout_above="@id/bottom_navigation"/>
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navigationBottom"
+        android:id="@+id/bottom_navigation"
+        android:background="@color/colorWhite"
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:layout_constraintBottom_toBottomOf="@+id/contentMain"
-        tools:ignore="MissingConstraints" />
-<!--    <androidx.-->
-<!--        android:background="?attr/colorPrimary"-->
-<!--        android:minHeight="?attr/actionBarSize"-->
-<!--        android:theme="?attr/actionBarTheme"-->
-<!--        tools:layout_editor_absoluteX="1dp"-->
-<!--        tools:layout_editor_absoluteY="4dp"-->
-<!--        tools:ignore="MissingConstraints" />-->
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:menu="@menu/bottom_navigation_main">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</RelativeLayout>

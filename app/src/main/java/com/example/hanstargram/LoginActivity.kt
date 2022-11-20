@@ -55,11 +55,11 @@ class LoginActivity : AppCompatActivity(){
                 val task: Task<GoogleSignInAccount> = GoogleSignIn.getSignedInAccountFromIntent(intent)
                 try{
                     val account = task.getResult(ApiException::class.java)!!
-                    Log.d(ContentValues.TAG, " " + account.id)
+                    Log.d(ContentValues.TAG, "firebaseAuthWithGoogle " + account.id)
                     firebaseAuthWithGoogle(account)
 
                 }catch (e: ApiException){
-                    Log.w(ContentValues.TAG, "", e)
+                    Log.w(ContentValues.TAG, "Google sign in failed", e)
                 }
             }
         }
@@ -106,7 +106,7 @@ class LoginActivity : AppCompatActivity(){
     }
     fun moveMainPage(user: FirebaseUser?) {
         if(user != null) {
-            startActivity(Intent(this,LoginActivity::class.java))
+            startActivity(Intent(this,MainActivity::class.java))
         }
     }
 
