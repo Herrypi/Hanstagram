@@ -7,11 +7,13 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.hanstargram.databinding.ActivityMainBinding
 import com.example.hanstargram.navigation.*
 import com.google.android.material.navigation.NavigationBarView
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(),  NavigationBarView.OnItemSelectedListener {
+    private var binding: ActivityMainBinding? = null
+
     override fun onNavigationItemSelected(p0: MenuItem): Boolean {
         when(p0.itemId){
             R.id.action_home ->{
@@ -45,11 +47,12 @@ class MainActivity : AppCompatActivity(),  NavigationBarView.OnItemSelectedListe
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        bottom_navigation.setOnItemSelectedListener(this)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding!!.root)
+        binding!!.bottomNavigation.setOnItemSelectedListener(this)
         ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE),1)
 
-        bottom_navigation.selectedItemId = R.id.action_home
+        binding!!.bottomNavigation.selectedItemId = R.id.action_home
     }
 
 

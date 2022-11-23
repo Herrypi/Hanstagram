@@ -3,9 +3,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/detailviewfragment_recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        android:id="@+id/fragment"-->
+<!--        android:name="com.example.hanstargram.navigation.DetailViewFragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        tools:layout="@layout/fragment_detail">-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/detailviewfragment_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+<!--    </androidx.fragment.app.FragmentContainerView>-->
+
+
 
 </LinearLayout>

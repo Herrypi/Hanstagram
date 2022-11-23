@@ -2,7 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
-    id 'kotlin-android-extensions'
+//    id 'kotlin-android-extensions'
 }
 
 android {
@@ -12,6 +12,7 @@ android {
     buildFeatures{
         viewBinding true
     }
+
     defaultConfig {
         applicationId "com.example.hanstargram"
         minSdk 23
@@ -55,4 +56,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
     implementation 'androidx.activity:activity:1.7.0-alpha02'
     implementation 'androidx.fragment:fragment:1.6.0-alpha03'
+    implementation("androidx.fragment:fragment-ktx:1.5.4")
 }
